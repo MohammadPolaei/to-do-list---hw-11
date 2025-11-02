@@ -15,7 +15,6 @@ export const header = El({
 				El({
 					element: "div",
 					classList: "text-white",
-					innertext: "My To-Do Tasks",
 				}),
 			],
 		}),
