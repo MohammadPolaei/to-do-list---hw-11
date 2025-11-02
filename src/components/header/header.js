@@ -1,0 +1,41 @@
+import { El } from "../../utils/EL";
+export const header = El({
+	element: "header",
+	classList:
+		"bg-[#6200ea] h-15 flex flex-row justify-between items-center px-3",
+	children: [
+		El({
+			element: "div",
+			children: [
+				El({
+					element: "img",
+					src: "/images/burgerMenu.svg",
+					classList: "w-8",
+				}),
+				El({
+					element: "div",
+					classList: "text-white",
+					innertext: "My To-Do Tasks",
+				}),
+			],
+		}),
+		El({
+			element: "div",
+			classList: "flex flex-row gap-5",
+			children: [
+				El({
+					element: "input",
+					placeholder: "Search",
+					classList:
+						"bg-[#ffffff22] rounded-[5px] h-10 px-3 text-[#ffffffbb] placeholder:text-[#ffffff55] outline-0",
+				}),
+				El({
+					element: "img",
+					src: "/images/filterIcon.svg",
+					classList: "w-8",
+				}),
+				El({ element: "img", src: "/images/addButton.svg", classList: "w-8" }),
+			],
+		}),
+	],
+});
