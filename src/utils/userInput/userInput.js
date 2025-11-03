@@ -1,6 +1,6 @@
 import { El } from "../EL/EL";
 
-export function inputDiv() {
+export function InputDiv() {
 	const inputsContainer = El({
 		element: "div",
 		classList: "flex items-center justify-center static",
@@ -11,7 +11,6 @@ export function inputDiv() {
 					"w-[50%] bg-[#00000088] p-10 shadow-2xl flex flex-col gap-3 items-center rounded-xl",
 			}),
 		],
-		// children: [El(), El(), El()],
 	});
 	inputsContainer.children[0].innerHTML = `<input id="userInputForTodo" type="text" placeholder="Task Title" class="rounded-xl bg-[#ffffff99] border-1 px-2 outline-0"> 
   <div class="flex flex-row gap-2">
@@ -38,7 +37,6 @@ export function inputDiv() {
   </div>
   <button id="userInputButton" class=" bg-white rounded-2xl p-2">submit</button>
   `;
-	console.log(inputsContainer.children[0]);
 
 	return inputsContainer;
 }

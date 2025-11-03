@@ -1,8 +1,8 @@
 import { header } from "./components/header/header";
 import { ToDoListMaker } from "./components/toDoList/toDoList";
 import "./style.css";
+import { ToAddIntoLocalstorage } from "./utils/EL/dataOfLocalstorage/dataOfLocalstorage";
 import { ToDoListAdderRemover } from "./utils/toDoListAdderRemover/toDoListAdderRemover";
-import { inputDiv } from "./utils/userInput/userInput";
 const main = document.getElementById("app");
 main.classList.add("relative");
 
@@ -40,4 +40,9 @@ Array.from(toDoListTitle.children).forEach((item, index) => {
 
 // title code end
 
-main.append(header, toDoListTitle, ToDoListAdderRemover(), inputDiv());
+main.append(
+	header,
+	toDoListTitle,
+	ToDoListAdderRemover(),
+	ToAddIntoLocalstorage()
+);
