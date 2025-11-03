@@ -1,4 +1,4 @@
-import { El } from "../../utils/EL";
+import { El } from "../../utils/EL/EL";
 export function toDoListContainer() {
 	El({
 		element: "div",
@@ -9,7 +9,7 @@ export function ToDoListMaker() {
 	const toDoList = El({
 		element: "div",
 		classList:
-			"flex flex-row justify-center border-y-2 border-t-0 border-[#00000015]",
+			"flex flex-row items-center justify-center border-y-2 border-t-0 border-[#00000015]",
 		children: [
 			El({
 				element: "div",
@@ -19,22 +19,22 @@ export function ToDoListMaker() {
 			El({
 				element: "div",
 				classList:
-					"text-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
+					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
 			}),
 			El({
 				element: "div",
 				classList:
-					"text-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
+					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
 			}),
 			El({
 				element: "div",
 				classList:
-					"text-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
+					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
 			}),
 			El({
 				element: "div",
 				classList:
-					"text-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
+					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 border-[#00000015]",
 			}),
 		],
 	});

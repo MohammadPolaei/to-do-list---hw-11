@@ -1,4 +1,4 @@
-import { El } from "../../utils/EL";
+import { El } from "../../utils/EL/EL";
 export const header = El({
 	element: "header",
 	classList:
