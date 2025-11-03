@@ -13,7 +13,7 @@ export function inputDiv() {
 		],
 		// children: [El(), El(), El()],
 	});
-	inputsContainer.children[0].innerHTML = `<input type="text" placeholder="Task Title" class="rounded-xl bg-[#ffffff99] border-1 px-2 outline-0"> 
+	inputsContainer.children[0].innerHTML = `<input id="userInputForTodo" type="text" placeholder="Task Title" class="rounded-xl bg-[#ffffff99] border-1 px-2 outline-0"> 
   <div class="flex flex-row gap-2">
     <p>Priority</p>
     <label for="low">low</label>
@@ -39,5 +39,6 @@ export function inputDiv() {
   <button id="userInputButton" class=" bg-white rounded-2xl p-2">submit</button>
   `;
 	console.log(inputsContainer.children[0]);
+
 	return inputsContainer;
 }

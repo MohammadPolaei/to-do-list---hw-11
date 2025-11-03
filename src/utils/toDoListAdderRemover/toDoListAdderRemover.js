@@ -29,7 +29,7 @@ export function ToDoListAdderRemover() {
 			case 3:
 				const DeadlineBox = El({
 					element: "div",
-					classList: "py-1 px-3 w-fit rounded-4xl border-1 border-[#55ff5599]",
+					classList: "py-1 px-3 w-fit rounded-4xl border-1 border-[#3333ffbb]",
 				});
 				DeadlineBox.innerHTML = "date";
 				item.append(DeadlineBox);
@@ -40,36 +40,54 @@ export function ToDoListAdderRemover() {
 					classList: "flex flex-row gap-1 justify-center items-center",
 					children: [
 						El({
-							element: "div",
-							classList: "bg-[#ff0000] p-1 rounded-[5px] items-center",
+							element: "button",
+
 							children: [
 								El({
-									element: "img",
-									classList: "w-5",
-									src: "/images/delete.svg",
+									element: "div",
+									classList: "bg-[#ff0000] p-1 rounded-[5px] items-center",
+									children: [
+										El({
+											element: "img",
+											classList: "w-5",
+											src: "/images/delete.svg",
+										}),
+									],
 								}),
 							],
 						}),
 						El({
-							element: "div",
-							classList: "bg-[#0000ff] p-1 rounded-[5px] items-center",
+							element: "button",
+
 							children: [
 								El({
-									element: "img",
-									classList: "w-5",
-									src: "/images/edit.svg",
+									element: "div",
+									classList: "bg-[#0000ff] p-1 rounded-[5px] items-center",
+									children: [
+										El({
+											element: "img",
+											classList: "w-5",
+											src: "/images/edit.svg",
+										}),
+									],
 								}),
 							],
 						}),
 
 						El({
-							element: "div",
-							classList: "bg-[#555555] p-1 rounded-[5px] items-center",
+							element: "button",
+
 							children: [
 								El({
-									element: "img",
-									classList: "w-5",
-									src: "/images/showHide.svg",
+									element: "div",
+									classList: "bg-[#555555] p-1 rounded-[5px] items-center",
+									children: [
+										El({
+											element: "img",
+											classList: "w-5",
+											src: "/images/showHide.svg",
+										}),
+									],
 								}),
 							],
 						}),
