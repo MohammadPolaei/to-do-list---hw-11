@@ -1,4 +1,25 @@
+import { main } from "../../main";
+import { ToAddIntoLocalstorage } from "../../utils/EL/dataOfLocalstorage/dataOfLocalstorage";
 import { El } from "../../utils/EL/EL";
+
+// add new list button
+const addNewListButton = El({
+	element: "button",
+	children: [
+		El({
+			element: "img",
+			src: "/images/addButton.svg",
+			classList: "w-8",
+		}),
+	],
+});
+
+addNewListButton.addEventListener("click", () => {
+	main.append(ToAddIntoLocalstorage());
+});
+
+// header
+
 export const header = El({
 	element: "header",
 	classList:
@@ -33,7 +54,7 @@ export const header = El({
 					src: "/images/filterIcon.svg",
 					classList: "w-8",
 				}),
-				El({ element: "img", src: "/images/addButton.svg", classList: "w-8" }),
+				addNewListButton,
 			],
 		}),
 	],
