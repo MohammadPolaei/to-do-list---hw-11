@@ -1,6 +1,7 @@
 import { header } from "./components/header/header";
 import { ToDoListMaker } from "./components/toDoList/toDoList";
 import "./style.css";
+import { ToGetFromLocalstorage } from "./utils/EL/dataOfLocalstorage/toGetFromLocalstorage";
 export const main = document.getElementById("app");
 main.classList.add("relative");
 
@@ -38,4 +39,4 @@ Array.from(toDoListTitle.children).forEach((item, index) => {
 
 // title code end
 
-main.append(header, toDoListTitle);
+main.append(header, toDoListTitle, ToGetFromLocalstorage());

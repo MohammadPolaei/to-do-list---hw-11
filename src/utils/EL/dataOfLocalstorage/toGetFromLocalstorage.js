@@ -8,7 +8,7 @@ export function ToGetFromLocalstorage() {
 			let dataGet = JSON.parse(localStorageDatas[items]);
 			console.log(dataGet);
 
-			ToDoListAdderRemover(dataGet);
+			return ToDoListAdderRemover(dataGet);
 		} catch {
 			return;
 		}

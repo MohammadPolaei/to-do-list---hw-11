@@ -3,8 +3,7 @@ import { El } from "../EL/EL";
 
 export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 	// exporting data into variables
-	const [title, priority, status, date] = dataObjectFromLocalstorage;
-	console.log(title, priority, status, date);
+	const { title, priority, status, date } = dataObjectFromLocalstorage;
 
 	// to do maker
 	const toDoItems = ToDoListMaker();
@@ -80,14 +79,14 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 
 		switch (index) {
 			case 0:
-				item.innerHTML = title;
+				item.innerHTML = `${title}`;
 				break;
 			case 1:
 				const priorityBox = El({
 					element: "div",
 					classList: "py-1 px-3 w-fit rounded-4xl bg-black text-white",
 				});
-				priorityBox.innerHTML = priority;
+				priorityBox.innerHTML = `${priority}`;
 				item.append(priorityBox);
 				break;
 			case 2:
@@ -96,7 +95,7 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 					classList: "py-1 px-3 w-fit rounded-4xl bg-black text-white",
 				});
 
-				statusBox.innerHTML = status;
+				statusBox.innerHTML = `${status}`;
 				item.append(statusBox);
 				break;
 			case 3:
@@ -104,7 +103,7 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 					element: "div",
 					classList: "py-1 px-3 w-fit rounded-4xl border-1 border-[#3333ffbb]",
 				});
-				DeadlineBox.innerHTML = date;
+				DeadlineBox.innerHTML = `${date}`;
 				item.append(DeadlineBox);
 				break;
 			case 4:
