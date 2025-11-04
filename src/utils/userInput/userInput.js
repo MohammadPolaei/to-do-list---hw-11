@@ -14,7 +14,7 @@ export function InputDiv() {
 		classList: "flex items-center justify-center absolute w-full top-5",
 		children: [inputsBox],
 	});
-	inputsContainer.children[0].innerHTML = `<input id="userInputForTodo" type="text" placeholder="Task Title" class="rounded-xl bg-[#ffffff99] border-1 px-2 outline-0"> 
+	inputsContainer.children[0].innerHTML = `<input id="userInputForTodo" type="text" placeholder="Task Title" class="rounded-xl bg-[#ffffff99] border-0 p-2 outline-0"> 
   <div class="flex flex-row gap-2">
     <p class="font-bold">Priority : </p>
     <label for="low">low</label>
@@ -37,7 +37,10 @@ export function InputDiv() {
     <p class="font-bold">Deadline : </p>
     <input class="inputDate" type="date">
   </div>
-  <button id="userInputButton" class=" bg-white rounded-2xl p-2">submit</button>
+  <div class="flex flex-row gap-2">
+    <button id="userInputButtonCancel" class=" bg-[#ffffff99] rounded-2xl p-2">cancel</button>
+    <button id="userInputButton" class=" bg-white rounded-2xl p-2">submit</button>
+  </div>
   `;
 
 	return inputsContainer;

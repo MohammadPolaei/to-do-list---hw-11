@@ -1,8 +1,10 @@
 import { InputDiv } from "../../userInput/userInput";
+import { ToGetFromLocalstorage } from "./toGetFromLocalstorage";
 
 export function ToAddIntoLocalstorage() {
 	const theInputs = InputDiv();
 	const submitButton = theInputs.querySelector("#userInputButton");
+	const cancelButton = theInputs.querySelector("#userInputButtonCancel");
 	// datas
 
 	submitButton.addEventListener("click", () => {
@@ -38,8 +40,14 @@ export function ToAddIntoLocalstorage() {
 					date: `${inputDate.value}`,
 				})
 			);
+			ToGetFromLocalstorage();
 			theInputs.remove();
 		}
 	});
+
+	cancelButton.addEventListener("click", () => theInputs.remove());
+
+	// test
+
 	return theInputs;
 }

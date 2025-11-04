@@ -1,7 +1,6 @@
 import { header } from "./components/header/header";
 import { ToDoListMaker } from "./components/toDoList/toDoList";
 import "./style.css";
-import { ToDoListAdderRemover } from "./utils/toDoListAdderRemover/toDoListAdderRemover";
 export const main = document.getElementById("app");
 main.classList.add("relative");
 
@@ -39,4 +38,4 @@ Array.from(toDoListTitle.children).forEach((item, index) => {
 
 // title code end
 
-main.append(header, toDoListTitle, ToDoListAdderRemover());
+main.append(header, toDoListTitle);

@@ -1,5 +1,5 @@
 import { main } from "../../main";
-import { ToAddIntoLocalstorage } from "../../utils/EL/dataOfLocalstorage/dataOfLocalstorage";
+import { ToAddIntoLocalstorage } from "../../utils/EL/dataOfLocalstorage/toAddIntoLocalStorage";
 import { El } from "../../utils/EL/EL";
 
 // add new list button
