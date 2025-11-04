@@ -27,7 +27,7 @@ export function ToAddIntoLocalstorage() {
 			resultOfStatus == undefined ||
 			inputDate.value == ""
 		) {
-			console.log("Inputs must be filled !");
+			alert("Inputs must be filled completely !");
 		} else {
 			localStorage.setItem(
 				`list ${titleOfInput.value}`,
@@ -38,6 +38,7 @@ export function ToAddIntoLocalstorage() {
 					date: `${inputDate.value}`,
 				})
 			);
+			theInputs.remove();
 		}
 	});
 	return theInputs;
