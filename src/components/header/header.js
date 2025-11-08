@@ -36,7 +36,7 @@ export const header = El({
 				}),
 				El({
 					element: "div",
-					classList: "text-white text-2xl",
+					classList: "text-white text-2xl hidden sm:block",
 					innerText: "My To-Do Tasks",
 				}),
 			],
