@@ -29,7 +29,7 @@ export function ToDoListMaker() {
 			El({
 				element: "div",
 				classList:
-					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 h-17 text-sm lg:text-lg border-[#00000015] overflow-hidden",
+					"text-center flex justify-center items-center p-5 w-[100%] border-x-2 border-r-0 h-17 text-sm lg:text-md border-[#00000015] overflow-hidden",
 			}),
 			El({
 				element: "div",
