@@ -1,4 +1,5 @@
 import { header } from "./components/header/header";
+import { PagesNumber } from "./components/pages number/pagesNumber";
 import { ToDoListMaker } from "./components/toDoList/toDoList";
 import "./style.css";
 import { ToGetFromLocalstorage } from "./utils/EL/dataOfLocalstorage/toGetFromLocalstorage";
@@ -39,4 +40,4 @@ Array.from(toDoListTitle.children).forEach((item, index) => {
 
 // title code end
 
-main.append(header, toDoListTitle, ToGetFromLocalstorage());
+main.append(header, toDoListTitle, ToGetFromLocalstorage(), PagesNumber());
