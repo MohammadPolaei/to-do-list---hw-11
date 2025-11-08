@@ -27,6 +27,7 @@ export const header = El({
 	children: [
 		El({
 			element: "div",
+			classList: "flex felx-row gap-5 items-center",
 			children: [
 				El({
 					element: "img",
@@ -35,7 +36,8 @@ export const header = El({
 				}),
 				El({
 					element: "div",
-					classList: "text-white",
+					classList: "text-white text-2xl",
+					innerText: "My To-Do Tasks",
 				}),
 			],
 		}),

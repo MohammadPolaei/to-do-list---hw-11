@@ -30,6 +30,7 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 
 		removeButton.addEventListener("click", () => {
 			toDoItems.remove();
+			localStorage.removeItem(`list ${title}`);
 		});
 
 		// edit button
@@ -82,18 +83,73 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 				item.innerHTML = `${title}`;
 				break;
 			case 1:
-				const priorityBox = El({
+				// choosing bg by priority
+				let priorityBox = El({
 					element: "div",
-					classList: "py-1 px-3 w-fit rounded-4xl bg-black text-white",
 				});
+				switch (priority) {
+					case "low":
+						priorityBox = El({
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-gray-300 text-black font-bold text-sm capitalize",
+						});
+
+						break;
+					case "medium":
+						priorityBox = El({
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-[#ffc107] text-black font-bold text-sm capitalize",
+						});
+
+						break;
+					case "high":
+						priorityBox = El({
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-[#dc3545] text-white font-bold text-sm capitalize",
+						});
+
+						break;
+
+					default:
+						break;
+				}
+
 				priorityBox.innerHTML = `${priority}`;
 				item.append(priorityBox);
 				break;
 			case 2:
-				const statusBox = El({
+				let statusBox = El({
 					element: "div",
-					classList: "py-1 px-3 w-fit rounded-4xl bg-black text-white",
 				});
+				switch (status) {
+					case "doing":
+						statusBox = El({
+							element: "div",
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-[#ffc107] text-black font-bold text-sm capitalize",
+						});
+
+						break;
+					case "todo":
+						statusBox = El({
+							element: "div",
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-[#dc3545] text-white font-bold text-sm capitalize",
+						});
+
+						break;
+					case "done":
+						statusBox = El({
+							element: "div",
+							classList:
+								"py-1 px-3 w-fit rounded-4xl bg-[#2e7d32] text-white font-bold text-sm capitalize",
+						});
+
+						break;
+
+					default:
+						break;
+				}
 
 				statusBox.innerHTML = `${status}`;
 				item.append(statusBox);
