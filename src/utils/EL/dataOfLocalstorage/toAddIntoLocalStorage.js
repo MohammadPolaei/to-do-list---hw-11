@@ -1,6 +1,8 @@
-import { main } from "../../../main";
 import { InputDiv } from "../../userInput/userInput";
-import { ToGetOneItemFromLocalstorage } from "./toGetFromLocalstorage";
+import {
+	listContainer,
+	ToGetOneItemFromLocalstorage,
+} from "./toGetFromLocalstorage";
 
 export function ToAddIntoLocalstorage() {
 	const theInputs = InputDiv();
@@ -41,7 +43,7 @@ export function ToAddIntoLocalstorage() {
 					date: `${inputDate.value}`,
 				})
 			);
-			main.append(ToGetOneItemFromLocalstorage(titleOfInput.value));
+			listContainer.append(ToGetOneItemFromLocalstorage(titleOfInput.value));
 			theInputs.remove();
 		}
 	});

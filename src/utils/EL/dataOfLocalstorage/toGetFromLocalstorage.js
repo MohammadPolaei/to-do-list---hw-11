@@ -1,7 +1,7 @@
 import { ToDoListAdderRemover } from "../../toDoListAdderRemover/toDoListAdderRemover";
 import { El } from "../EL";
 
-const listContainer = El({
+export const listContainer = El({
 	element: "div",
 });
 

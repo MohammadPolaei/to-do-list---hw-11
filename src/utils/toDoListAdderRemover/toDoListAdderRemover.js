@@ -1,4 +1,6 @@
 import { ToDoListMaker } from "../../components/toDoList/toDoList";
+import { main } from "../../main";
+import { ToAddIntoLocalstorage } from "../EL/dataOfLocalstorage/toAddIntoLocalStorage";
 import { El } from "../EL/EL";
 
 export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
@@ -53,7 +55,10 @@ export function ToDoListAdderRemover(dataObjectFromLocalstorage) {
 			],
 		});
 
-		editButton.addEventListener("click", () => {});
+		editButton.addEventListener("click", () => {
+			main.append(ToAddIntoLocalstorage());
+			document.getElementById("userInputForTodo").value = title;
+		});
 		// showHide button
 
 		const showHideButton = El({
